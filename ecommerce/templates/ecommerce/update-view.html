@@ -1,0 +1,14 @@
+{% include "ecommerce/messages.html" %}
+
+<h1>
+    Actulización de producto 
+</h1>
+<h2>
+    {{ form.instance.title }}
+</h2>
+
+<form method="POST" action="">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Actualizar">
+</form>
